@@ -11,10 +11,6 @@ class ComposerStaticInitf7645cff4c1732ec7ca78496cac9982b
         array (
             'Slim\\PDO\\' => 9,
         ),
-        'A' => 
-        array (
-            'Aura\\SqlQuery\\' => 14,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -22,45 +18,6 @@ class ComposerStaticInitf7645cff4c1732ec7ca78496cac9982b
         array (
             0 => __DIR__ . '/..' . '/slim/pdo/src/PDO',
         ),
-        'Aura\\SqlQuery\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/aura/sqlquery/src',
-        ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'P' => 
-        array (
-            'PEAR' => 
-            array (
-                0 => __DIR__ . '/..' . '/pear/pear_exception',
-            ),
-        ),
-        'M' => 
-        array (
-            'MDB2' => 
-            array (
-                0 => __DIR__ . '/..' . '/silverorange/mdb2',
-            ),
-        ),
-        'C' => 
-        array (
-            'Console' => 
-            array (
-                0 => __DIR__ . '/..' . '/pear/console_getopt',
-            ),
-        ),
-    );
-
-    public static $fallbackDirsPsr0 = array (
-        0 => __DIR__ . '/..' . '/pear/pear-core-minimal/src',
-    );
-
-    public static $classMap = array (
-        'MDB2_BufferedResult_mysqli' => __DIR__ . '/..' . '/bondas83/mdb2_driver_mysqli/MDB2/Driver/mysqli.php',
-        'MDB2_Driver_mysqli' => __DIR__ . '/..' . '/bondas83/mdb2_driver_mysqli/MDB2/Driver/mysqli.php',
-        'MDB2_Result_mysqli' => __DIR__ . '/..' . '/bondas83/mdb2_driver_mysqli/MDB2/Driver/mysqli.php',
-        'MDB2_Statement_mysqli' => __DIR__ . '/..' . '/bondas83/mdb2_driver_mysqli/MDB2/Driver/mysqli.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -68,9 +25,6 @@ class ComposerStaticInitf7645cff4c1732ec7ca78496cac9982b
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitf7645cff4c1732ec7ca78496cac9982b::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitf7645cff4c1732ec7ca78496cac9982b::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitf7645cff4c1732ec7ca78496cac9982b::$prefixesPsr0;
-            $loader->fallbackDirsPsr0 = ComposerStaticInitf7645cff4c1732ec7ca78496cac9982b::$fallbackDirsPsr0;
-            $loader->classMap = ComposerStaticInitf7645cff4c1732ec7ca78496cac9982b::$classMap;
 
         }, null, ClassLoader::class);
     }

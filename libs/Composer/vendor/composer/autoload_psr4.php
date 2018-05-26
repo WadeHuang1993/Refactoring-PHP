@@ -7,5 +7,4 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Slim\\PDO\\' => array($vendorDir . '/slim/pdo/src/PDO'),
-    'Aura\\SqlQuery\\' => array($vendorDir . '/aura/sqlquery/src'),
 );

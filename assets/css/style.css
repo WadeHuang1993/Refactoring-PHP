@@ -1,0 +1,11 @@
+
+/**
+  top-header
+ */
+.top-header {
+    background: url('../image/website/top-banner.jpg');
+}
+
+.top-header .top-banner {
+    color: #fff;
+}

@@ -7,9 +7,10 @@
 
 # 前言
 
-寫這系列文章的起因是，自己在工作崗位中也接手到了所謂的 Legacy Code 的專案，打開程式碼只能看見七零八落難以閱讀的程式碼。這還不打緊，要調整需求時，明明只是修改一段邏輯，卻要改 7 ~ 8 段程式碼，還常要翻遍整個專案來確保有沒有漏改掉的地方！
+撰寫重構系列文章的動機：
+最近自己在工作崗位接觸到 Legacy Code 的專案，打開專案只能看見七零八落、難以閱讀的程式碼。常常調整需求時，明明只是修改一小段邏輯，卻要改 7 ~ 8 隻程式碼，還要翻遍整個專案來確保有沒有漏改掉的地方。
 
-持續一段時間後，發現這種專案的開發與維護成本太高了，有必要進行重構改善。重構的目標為分離程式碼的責任、提升程式碼的可讀性與重複使用性。本系列文章將依照 [Modernizing Legacy Code With PHP](https://github.com/WadeHuang1993/Refactoring-PHP/wiki/Modernizing-Legacy-Code-With-PHP) 這本書的內容進行重構 PHP。照著書裡面的章節完成重構後，基本上會把原生 PHP 重構成一個簡單的 MVC 架構。
+一段時間後，發現這種專案的開發與維護成本太高了，有必要進行重構改善。重構的目標為`分離程式碼的責任`、`提升程式碼的可讀性`與`重複使用性`。本系列文章將依照 [Modernizing Legacy Code With PHP](https://github.com/WadeHuang1993/Refactoring-PHP/wiki/Modernizing-Legacy-Code-With-PHP) 這本書的內容進行重構 PHP。照著書裡面的章節完成重構後，基本上會把原生 PHP 重構成一個簡單的 MVC 架構。
 
 重構後的 MVC 架構包含了 PSR-1、PSR-2、Autoloader（雖然書內使用 PSR-0，但可用 Composer 取代成 PRS-4）、Router、跟依賴注射容器。
 

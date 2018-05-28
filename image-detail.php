@@ -99,7 +99,9 @@ $next_row = $result->fetch();
                 <tbody>
                 <tr>
                     <td>
-                        <button class="format btn bg-info text-primary" data-toggle="modal" data-target="#print-window" data-format="2x3">2x3</button>
+                        <button class="format btn bg-info text-primary" data-toggle="modal" data-target="#print-window"
+                                format="2x3">2x3
+                        </button>
                         <span class="price text-danger"> $8</span>
                         <span class="unit text-primary"> / 組</span>
                     </td>
@@ -109,7 +111,9 @@ $next_row = $result->fetch();
                 </tr>
                 <tr>
                     <td>
-                        <button class="format btn bg-info text-primary" data-toggle="modal" data-target="#print-window" data-format="3x5">3x5</button>
+                        <button class="format btn bg-info text-primary" data-toggle="modal" data-target="#print-window"
+                                format="3x5">3x5
+                        </button>
                         <span class="price text-danger"> $3</span>
                         <span class="unit text-primary"> / 張</span>
                     </td>
@@ -120,7 +124,9 @@ $next_row = $result->fetch();
                 </tr>
                 <tr>
                     <td>
-                        <button class="format btn bg-info text-primary" data-toggle="modal" data-target="#print-window" data-format="4x6">4x6</button>
+                        <button class="format btn bg-info text-primary" data-toggle="modal" data-target="#print-window"
+                                format="4x6">4x6
+                        </button>
                         <span class="price text-danger"> $3.5</span>
                         <span class="unit text-primary"> / 張</span>
                     </td>
@@ -131,15 +137,17 @@ $next_row = $result->fetch();
                 </tr>
                 </tbody>
             </table>
+            <div class="open-print-window text-center">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#print-window">我要沖洗相片</button>
+            </div>
         </div>
         <hr/>
     </div>
 </div>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#print-window">...</button>
-
-<div id="print-window" class="modal inmodal fade"  tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="true">
-    <div class="modal-dialog modal-lg" >
+<div id="print-window" class="modal inmodal fade" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">
@@ -149,18 +157,79 @@ $next_row = $result->fetch();
                     <h3>選擇沖印數量</h3>
                 </div>
             </div>
-            <div class="modal-body" >
-                <div>
-                    <img class="center-block" src="<?= IMAGE_ROOT . $row['src'] ?>" />
-                </div>
-                <hr/>
-                <h3>規格：</h3>
-                <label for="mount">數量</label>
+            <form action="cart/index.php" method="post">
+                <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                <input type="hidden" name="buyItems" value="<?= $row['id'] ?>">
+                <div class="modal-body">
+                    <div>
+                        <img class="center-block" src="<?= IMAGE_ROOT . $row['src'] ?>"/>
+                    </div>
+                    <hr/>
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <td>尺寸 / 單價</td>
+                            <td>大量購價</td>
+                            <td>購買數量</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <span class="format btn bg-info text-primary">2x3</span>
+                                <span class="price text-danger"> $8</span>
+                                <span class="unit text-primary"> / 組</span>
+                            </td>
+                            <td>
+                                <span class="discount"> 無大量購價</span>
+                            </td>
+                            <td>
+                                <label for="mount">數量</label>
+                                <input type="number" class="buy-amount" format="2x3" placeholder="0" min="0"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="format btn bg-info text-primary">3x5</span>
+                                <span class="price text-danger"> $3</span>
+                                <span class="unit text-primary"> / 張</span>
+                            </td>
+                            <td>
+                                <span class="discount"> 1000 張以上 1 張 </span>
+                                <span class="text-danger">$2.5</span>
+                            </td>
+                            <td>
+                                <label for="mount">數量</label>
+                                <input type="number" class="buy-amount" format="3x5" placeholder="0" min="0"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="format btn bg-info text-primary">4x6</span>
+                                <span class="price text-danger"> $3.5</span>
+                                <span class="unit text-primary"> / 張</span>
+                            </td>
+                            <td>
+                                <span class="discount"> 1000 組以上 1 張 </span>
+                                <span class="text-danger">$3</span>
+                            </td>
 
-            </div>
-            <div class="modal-footer" >
-                <button class="btn add-product">OK</button>
-                <button class="btn cancel" data-dismiss="modal">Cancel</button>
+                            <td>
+                                <label for="mount">數量</label>
+                                <input type="number" class="buy-amount" format="4x6" placeholder="0" min="0"/>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary add-product"><i class="fas fa-lg fa-cart-plus">加入購物車</i>
+
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="modal-footer text-center">
+                <button class="btn btn-default cancel" data-dismiss="modal">取消</button>
             </div>
         </div>
     </div>
@@ -168,11 +237,33 @@ $next_row = $result->fetch();
 
 <script>
     $(function () {
-        $('.add-product').click(function() {
+        $('.add-product').click(function () {
+            buyAmounts = $('.buy-amount');
+            form = this.form;
 
-        });
-        $('.cancel').click(function() {
-//            $('#print-window').hide();
+            buyItems = {};
+            buyAmounts.each(function (index, buyAmount) {
+                format = buyAmount.getAttribute('format');
+                amount = buyAmount.value;
+
+                if (amount > 0) {
+                    buyItem = {
+                        format: format,
+                        amount: amount
+                    };
+
+                    buyItems[format] = buyItem;
+                } else {
+                    delete buyItems[format];
+                }
+            });
+
+            if (Object.keys(buyItems).length >=1) {
+                form.buyItems.value = JSON.stringify(buyItems);
+                form.submit();
+            } else {
+                return false;
+            }
         });
     });
 </script>

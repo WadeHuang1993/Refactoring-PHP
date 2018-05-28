@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6043c5ef-fdc8-405c-9936-e06281b40a0c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/footer.php" afterPath="$PROJECT_DIR$/common/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/page/image-detail.css" afterPath="$PROJECT_DIR$/assets/css/page/image-detail.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image-detail.php" afterPath="$PROJECT_DIR$/image-detail.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,9 +37,15 @@
       <file leaf-file-name="image-detail.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/image-detail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="91" column="44" lean-forward="true" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="44" />
-              <folding />
+            <state relative-caret-position="141">
+              <caret line="156" column="23" lean-forward="false" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="23" />
+              <folding>
+                <element signature="e#4933#4940#1#HTML" expanded="true" />
+                <marker date="1527391327500" expanded="true" signature="5622:5811" ph="..." />
+                <marker date="1527391327500" expanded="true" signature="5642:5800" ph="{...}" />
+                <marker date="1527391327500" expanded="true" signature="5687:5699" ph="{...}" />
+                <marker date="1527391327500" expanded="true" signature="5740:5792" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,8 +53,8 @@
       <file leaf-file-name="image-detail.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/page/image-detail.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="39" lean-forward="true" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+            <state relative-caret-position="374">
+              <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -142,8 +147,8 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/assets/css/ez-spacing/x-small-space-util.css" />
         <option value="$PROJECT_DIR$/common/header2.php" />
-        <option value="$PROJECT_DIR$/image-detail.php" />
         <option value="$PROJECT_DIR$/assets/css/page/image-detail.css" />
+        <option value="$PROJECT_DIR$/image-detail.php" />
       </list>
     </option>
   </component>
@@ -290,12 +295,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527301767609</updated>
-      <workItem from="1527301769019" duration="16431000" />
+      <workItem from="1527301769019" duration="17681000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16431000" />
+    <option name="totallyTimeSpent" value="17681000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -526,14 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/page/image-detail.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="39" lean-forward="true" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/header2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
@@ -542,11 +539,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/page/image-detail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/image-detail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="91" column="44" lean-forward="true" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="44" />
-          <folding />
+        <state relative-caret-position="141">
+          <caret line="156" column="23" lean-forward="false" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="23" />
+          <folding>
+            <element signature="e#4933#4940#1#HTML" expanded="true" />
+            <marker date="1527391327500" expanded="true" signature="5622:5811" ph="..." />
+            <marker date="1527391327500" expanded="true" signature="5642:5800" ph="{...}" />
+            <marker date="1527391327500" expanded="true" signature="5687:5699" ph="{...}" />
+            <marker date="1527391327500" expanded="true" signature="5740:5792" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

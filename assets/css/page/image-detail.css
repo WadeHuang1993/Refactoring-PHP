@@ -22,3 +22,8 @@ footer {
         display: none;
     }
 }
+
+#print-window img {
+    max-height: 400px;
+    margin: auto;
+}

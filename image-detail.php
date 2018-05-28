@@ -85,9 +85,9 @@ $next_row = $result->fetch();
                 <p>拍攝於 <?= date('Y 年 m 月 d 日', strtotime($row['taken_time'])) ?></p>
             </div>
             <hr/>
-            <h3>加入沖印清單</h3>
+            <h3>線上沖洗服務</h3>
 
-            選擇要沖印的尺寸
+            選擇要沖洗的尺寸
             <hr/>
             <table class="table table-hover">
                 <thead>
@@ -99,7 +99,7 @@ $next_row = $result->fetch();
                 <tbody>
                 <tr>
                     <td>
-                        <button class="format btn bg-info text-primary">2x3</button>
+                        <button class="format btn bg-info text-primary" data-toggle="modal" data-target="#print-window" data-format="2x3">2x3</button>
                         <span class="price text-danger"> $8</span>
                         <span class="unit text-primary"> / 組</span>
                     </td>
@@ -109,7 +109,7 @@ $next_row = $result->fetch();
                 </tr>
                 <tr>
                     <td>
-                        <button class="format btn bg-info text-primary">3x5</button>
+                        <button class="format btn bg-info text-primary" data-toggle="modal" data-target="#print-window" data-format="3x5">3x5</button>
                         <span class="price text-danger"> $3</span>
                         <span class="unit text-primary"> / 張</span>
                     </td>
@@ -120,7 +120,7 @@ $next_row = $result->fetch();
                 </tr>
                 <tr>
                     <td>
-                        <button class="format btn bg-info text-primary">4x6</button>
+                        <button class="format btn bg-info text-primary" data-toggle="modal" data-target="#print-window" data-format="4x6">4x6</button>
                         <span class="price text-danger"> $3.5</span>
                         <span class="unit text-primary"> / 張</span>
                     </td>
@@ -134,7 +134,47 @@ $next_row = $result->fetch();
         </div>
         <hr/>
     </div>
-</div><br>
+</div>
 
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#print-window">...</button>
+
+<div id="print-window" class="modal inmodal fade"  tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="true">
+    <div class="modal-dialog modal-lg" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+                <div class="modal-title ">
+                    <h3>選擇沖印數量</h3>
+                </div>
+            </div>
+            <div class="modal-body" >
+                <div>
+                    <img class="center-block" src="<?= IMAGE_ROOT . $row['src'] ?>" />
+                </div>
+                <hr/>
+                <h3>規格：</h3>
+                <label for="mount">數量</label>
+
+            </div>
+            <div class="modal-footer" >
+                <button class="btn add-product">OK</button>
+                <button class="btn cancel" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.add-product').click(function() {
+
+        });
+        $('.cancel').click(function() {
+//            $('#print-window').hide();
+        });
+    });
+</script>
 
 <?php require_once('common/footer.php'); ?>

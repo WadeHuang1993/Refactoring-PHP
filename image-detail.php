@@ -155,7 +155,7 @@ require_once('common/header2.php');
                     <span>&times;</span>
                 </button>
                 <div class="modal-title ">
-                    <h3>選擇沖印數量</h3>
+                    <h3>選擇沖洗數量</h3>
                 </div>
             </div>
             <form action="cart/index.php" method="post">

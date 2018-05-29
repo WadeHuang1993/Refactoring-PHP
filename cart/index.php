@@ -22,7 +22,7 @@ require_once(__DIR__ . '/../common/header.php');
                     <thead>
                     <tr>
                         <td colspan="2">商品</td>
-                        <td>單價</td>
+                        <td>規格/單價</td>
                         <td>購買數量</td>
                         <td>小計</td>
                     </tr>
@@ -94,8 +94,8 @@ require_once(__DIR__ . '/../common/header.php');
                     </tbody>
                 </table>
                 <hr/>
-                <div class="">
-                    <div class="total col-lg-14 col-md-14 col-sm-14 col-xs-24">
+                <div class="pull-right">
+                    <div class="total">
                         <p></p>
                         <p>
                             宅配 | 運費 NT$ 80<br>
@@ -104,7 +104,7 @@ require_once(__DIR__ . '/../common/header.php');
                         <p></p>
 
                         <p><strong>合計　NT$<em>
-                                    660</em></strong></p>
+                                    167</em></strong></p>
                     </div>
                 </div>
 

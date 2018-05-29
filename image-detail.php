@@ -1,6 +1,5 @@
 <?php
 require_once('config/config.php');
-require_once('common/header2.php');
 
 $id = $_GET['id'];
 
@@ -31,6 +30,8 @@ $sql = $db->select()
 $result = $sql->execute();
 
 $next_row = $result->fetch();
+
+require_once('common/header2.php');
 ?>
 
 

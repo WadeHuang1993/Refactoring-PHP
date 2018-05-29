@@ -1,0 +1,11 @@
+.car .cart-body img {
+    max-height: 80px;
+}
+
+.car .cart-body table tbody td {
+    /*text-align: center;*/
+}
+.car .cart-body table tbody td span {
+   /*margin-top: 30px;*/
+}
+
